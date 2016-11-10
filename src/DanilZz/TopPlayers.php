@@ -39,7 +39,7 @@
 
 		public function onCommand(CommandSender $sender, Command $command, $label, array $args) {
 			if($sender instanceof Player) {
-				if(strtolower($command->getName()) == 'atp') {
+				if(strtolower($command->getName()) == 'top') {
 					if(count($args) == 1 || count($args) == 2) {
 						$action = strtolower($args[0]);
 						if($action == 'kill' || $action == 'death' || $action == 'break' || $action == 'place') {
@@ -59,7 +59,7 @@
 							$sender->sendMessage(str_replace('{player}', $action, $this->config['titleStat'])."\n§aУбил: §d".$user['kill']."\n§aУмер: §d".$user['death']."\n§aСломано: §d".$user['break']."\n§aПоставил: §d".$user['place']);
 						else $sender->sendMessage($this->config['userNotExist']);
 					}
-					else $sender->sendMessage('§eUsing: /atp <kill/death/break/place> [player]');
+					else $sender->sendMessage('§eUsing: /top <kill/death/break/place> [player]');
 				}
 			}
 		}
