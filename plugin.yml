@@ -1,0 +1,17 @@
+name: TopPlayers
+main: DanilZz\TopPlayers
+version: 1
+api: 2.0.0
+author: DanilZz
+
+commands:
+  top:
+    default: op
+    description: spawn floating text TOP
+    permission: top.create
+permissions:
+  top:
+    default: op
+    chidlren:
+      atp.use:
+        default: op
